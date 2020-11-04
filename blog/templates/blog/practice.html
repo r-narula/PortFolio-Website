@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <h2 class="nav"id="navicon">Share</h2>
+    <ul class="side-categories" style="display:none">  
+        <li> {% post_to_facebook "{{request.build_absolute_uri}}" "Facebook" %}</li>
+         <li>{% post_to_twitter "New Song: {{object.title}}. Check it out!" object_or_url "Post to Twitter" %}</li>
+         <li>{% post_to_linkedin object_or_url %}</li>
+         <li>{% post_to_reddit "New Song: {{object.title}}" "{{request.build_absolute_uri}}" %}</li>
+         <li>{% post_to_telegram "New Song: {{object.title}}" "{{request.build_absolute_uri}}" %}</li>
+         <li>{% post_to_whatsapp object_or_url "Share via WhatsApp" %}</li>
+       </ul>
+    <script>
+    $(function() {     
+        $('.nav').on('click',function(e) {
+            e.preventDefault();
+            $(".side-categories").slideToggle();
+        });
+    });
+</script>
+</body>
+</html>

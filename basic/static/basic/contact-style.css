@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Oswald:wght@700&family=Turret+Road:wght@700&display=swap');
+
+.heading
+{
+    font-size:70px;
+    font-family: 'Kaushan Script', cursive;
+
+}
+.list-contact li
+{
+    list-style-type: none;
+    font-size: 24px;
+    color:white;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Turret Road', cursive;
+}
+p
+{
+    color:#F27405;
+}
+.email
+{
+    color:white;
+    font-size: 20px;
+}
+.list-contact li:hover
+{
+    color:#F27405;
+}

@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'basic/main.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'basic/style.css' %}">
+</head>
+<body>
+
+<div class="split left">
+  <div class="centered-left">
+      <h4>Soon an Image will Come</h4>
+    <ul class="list-things">
+        <li>Home</li>
+        <li>Projects</li>
+        <li>Experience</li>
+        <li>Blog</li>
+        <li>Contact</li>
+    </ul>
+    <ul class="links">
+        <li>Telegram</li>
+        <li>Instagram</li>
+    </ul>
+    <p class="email"><a href="mailto:rnarula_be19@thapar.edu" class="mailme">Mail Me</a></p>
+  </div>
+</div>
+
+    <div class="split right">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            <div id="responsive-button">
+                <!-- <img src="nav-button.png" alt="three line navigation button"> -->
+                <img src="{% static 'basic/nav-button.png' %}" alt="three lines">
+            </div>
+            </nav>
+        </div>
+        <!-- <div class="centered-right"> -->
+        <ul class="name-raghav">
+            <li class="name-raghav-left">RAGHAV</li>
+            <li class="name-raghav-right">NARULA</li>
+        </ul>
+        <ul class="more-about-me">
+            <li class="place">Delhi,India</li>
+            <li>|</li>
+            <li class="mononoke ">Mononoke</li>
+            <li class="only-in-small">| rnarula_be19@thapar.edu</li>
+        </ul>
+        <p class="about-me"> Hey, I'm Raghav Narula. I am a Backend developer and a Machine Learning enthusiast.Sitting on a computer for a big chunk of my Day.<br>This site is a collection of my blogs n all the stuff I learn on a new basis.</p>
+    </div>
+</div>
+
+
+
+
+
+        <script>
+        var navButton = document.getElementById("responsive-button");
+        navButton.addEventListener("click", showNav);
+        navButton.wasClicked = false;
+
+        var menuStyle = document.querySelector("nav ul");
+
+        window.onresize = toggle;
+        function toggle() {
+            if (window.innerWidth < 751) {
+                menuStyle.removeAttribute("class", "responsive-style");       
+            }
+        }
+        function showNav() {
+            
+            if (this.wasClicked == false) {
+                menuStyle.setAttribute("class", "responsive-style");
+                this.wasClicked = true;
+            } else if (this.wasClicked == true) {
+                menuStyle.removeAttribute("class", "responsive-style");
+                this.wasClicked = false;
+            } 
+        }
+        </script>
+</body>
+</html> 
