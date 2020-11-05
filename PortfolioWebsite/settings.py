@@ -26,7 +26,7 @@ SECRET_KEY = 'z#*-5r@og2^w3g8zu+cm$&e&n=keb*l^^b@5r@qg9$o0qw34)*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['rnarula.herokuapp.com']
 
 
 # Application definition
