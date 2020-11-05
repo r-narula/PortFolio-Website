@@ -20,7 +20,7 @@
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
-          <!-- <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Django Blog</a> -->
+          <a class="navbar-brand mr-4">Contact Me</a>
           <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">{{title}}</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -33,8 +33,8 @@
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
               <a class="nav-item nav-link" href="#">Internships</a>
-              <a class="nav-item nav-link" href="#">Projects</a>
-              <a class="nav-item nav-link" href="#">Experience</a>
+              <a class="nav-item nav-link" href="{% url 'project-page'%}">Projects</a>
+              <a class="nav-item nav-link" href="{% url 'blog-home' %}">Blog</a>
               <!-- <a class="nav-item nav-link" href="#"></a> -->
             </div>
           </div>
@@ -48,18 +48,28 @@
           <p>Hit me up here!</p>
           <p class="email">Email at: rnarula_be19@thapar.edu</p>
           <ul class="list-contact">
-              <li><a>Telegram</a></li>
-              <li><a>Instagram</a></li>
-              <li><a>Linkedin</a></li>
-              <li><a>Facebook</a></li>
+            <a href="https://t.me/r_narula"><li>Telegram</li></a>
+            <a href="https://www.instagram.com/raghav.narula_3001/"><li>Instagram</li></a>
+              <a href="https://www.linkedin.com/in/r-narula2001/"><li>Linkedin</li></a>
             </ul>
         </div>
+        <div class="col-md-4">
+          <div class="content-section">
+            <h3 class="moreinfo">Hit Me up!</h3>
+              <ul class="list-group">  
+                <a href="https://t.me/r_narula"><li class="list-group-item list-group-item-light"id='list-thing'>Telegram</li></a>
+                <a href="https://www.instagram.com/raghav.narula_3001/"><li class="list-group-item list-group-item-light"id='list-thing'>Insta</li></a>
+                <li class="list-group-item list-group-item-light"id='list-thing'>Mail Me</li>
+                <a href="https://github.com/r-narula"><li class="list-group-item list-group-item-light"id='list-thing'>Github</li></a>
+              </ul>
+          </div>
+        </div>
+      </div>
       </div>
       <br>
       <br>
       <br>
     </main>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

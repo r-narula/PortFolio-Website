@@ -3,27 +3,23 @@
 {
     list-style: none;
     display: inline;
-    color:black;
+    color:white;
 }
 .about-me
 {
     font-size:25px;
     font-family: 'Oswald', sans-serif;
     font-family: 'Turret Road', cursive;
-    color:black;
+    color:white;
 }
 .raghav-narula-name
 {
     font-size:70px;
     font-family: 'Kaushan Script', cursive;
-    color:black;
-}
-body
-{
-    background-color: #F2F2F2;
+    color:white;
 }
 .bg-steel {
-    background-color: #F2F2F2;
-    background: #03A6A6;
+    background-color: #F27407;
+    /* background: #03A6A6; */
     border-radius: 20px;
 }
