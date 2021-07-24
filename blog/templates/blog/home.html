@@ -1,0 +1,23 @@
+{% extends "blog/blog-base.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">Mononoke</a>
+              <small class="date-class">{{ post.date_posted }}</small>
+            </div>
+            <h2><a class="article-title" href="{% url 'blog-mapper' post.id %}">{{ post.title }}</a></h2>
+            <span>
+            {% if post.data|length > 150 %}
+            <p class="article-content">{{ post.data|truncatewords:30 }}</p>
+            <a href="{% url 'blog-mapper' post.id %}" class="ReadMoretag">ReadMore</a>
+            {% else %}
+            <p class="article-content">{{ post.data }}</p>
+            {% endif %}
+            </span>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
+

@@ -1,0 +1,24 @@
+{% extends "blog/blog-base.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">Mononoke</a>
+              <small class="date-class">{{ post.date_posted }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+            <p class="article-content">{{ post.data }}</p>
+            <div class="only-on-hover"> <!--Display this box only on hover-->
+                <article class="media share-section">
+                  <ul class="share-list">
+                    <li>Share</li>
+                    <li>Like</li>
+                    <li>Comment</li>
+                  </ul>
+                </article>
+            </div>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

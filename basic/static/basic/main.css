@@ -1,0 +1,196 @@
+body {
+    font-family: Arial;
+    color: white;
+  }
+  
+   .split {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  .left {
+    left: 0;
+    width:20%;
+    background-color: #111;
+    position: fixed;
+    text-align: justify;
+  }
+  
+  .right {
+    right: 0;
+    width:80%;
+    /* background-color:#F27405; */
+    background: #F2F2F2;
+    color:black;
+    padding:10px;
+  }
+  .centered-left {
+    position: absolute;
+    color:red;
+    top:30%;
+    left:10%;
+    right:10%;
+  }
+
+  .list-things li
+  {
+    list-style-type: none;
+    color:white;
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-family: 'Turret Road', cursive;
+  }
+  .list-things li:hover
+  {
+    transition: 0.2s;
+    list-style-type: none;
+    color:#F27405;
+  }
+  .links li
+  {
+    list-style-type: none;
+    display: inline;
+    font-size: 20px;
+    color:#0ED2E9;
+    padding-right: 10px;
+  }
+  .mailme
+  {
+    display: inline;
+    margin-left: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    text-decoration: none;
+    color:white;
+  }
+  .mailme:hover
+  {
+    text-decoration: underline;
+    color:white;
+  }
+
+  .name-raghav
+  {
+    position: fixed;
+    top:200px;
+    font-size: 70px; 
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 400;
+    font-weight: 900;
+    color:black;
+    letter-spacing:2px;
+    transform:scale(1,1.5);
+    display: inline;
+
+  }
+  .name-raghav li 
+  {
+    display: inline;
+  }
+  .name-raghav-left
+  {
+    color:#F27405;
+    text-shadow: #000 1px 1px 10px;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .about-me
+  {
+    position:fixed;
+    top:370px;
+    margin-right:5%;
+    font-size:30px;
+    font-family: 'Titillium Web', sans-serif;
+    margin-left:2%;
+  } 
+
+  .more-about-me
+  {
+    position:fixed;
+    top:340px;
+    font-size:25px;
+    margin-left:0%;
+  }
+  .more-about-me li
+  {
+    display: inline;
+    color:rgb(41, 37, 37);
+  }
+  .more-about-me li:nth-child(4)
+  {
+    display: none;
+  }
+
+  @media only screen and (max-width: 1100px) 
+{
+  .name-raghav
+  {
+    /* transition: 0.5s; */
+    position: fixed;
+    top:240px;
+    font-size: 5vw;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color:black;
+    letter-spacing:2px;
+    transform:scale(1,1.5);
+  }
+  .left
+  {
+    transition: 0.5s;
+    width: 0%;
+  }
+  .right
+  {
+    transition: 0.5s;
+    width:100%;
+  }
+  .about-me
+  {
+    top:370px;
+    margin-left:4%;
+    font-size: 3vw;
+  }
+  .more-about-me
+  {
+    top:340px;
+    margin-left:0%;
+  }
+  .more-about-me li:nth-child(4)
+  {
+    display:inline;
+  }
+}
+
+
+
+@media only screen and (max-width: 600px) 
+{
+  .name-raghav
+  {
+    position: fixed;
+    top:200px;
+    font-size: 6vw;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color:black;
+    letter-spacing:2px;
+    transform:scale(1,1.5);
+  }
+  .more-about-me
+  {
+    top:270px;
+    font-size: 20px;
+  }
+  .about-me
+  {
+    top:310px;
+    font-size: 20px;
+    margin-left:7%;
+  }
+}
+

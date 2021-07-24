@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Oswald:wght@700&family=Turret+Road:wght@700&display=swap');
+.more-about-me li
+{
+    list-style: none;
+    display: inline;
+    color:white;
+}
+.about-me
+{
+    font-size:25px;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Turret Road', cursive;
+    color:white;
+}
+.raghav-narula-name
+{
+    font-size:70px;
+    font-family: 'Kaushan Script', cursive;
+    color:white;
+}
+.bg-steel {
+    background-color: #F27407;
+    /* background: #03A6A6; */
+    border-radius: 20px;
+}

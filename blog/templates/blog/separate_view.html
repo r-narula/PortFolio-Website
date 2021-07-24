@@ -1,0 +1,35 @@
+
+{% extends "blog/blog-base.html" %}
+{% load social_share %}
+{% block content %}
+  <article class="media content-section">
+    <div class="media-body">
+      <div class="article-metadata">
+        <h2>Mononoke</h2>
+        <small class="date-class">{{object.date_posted }}</small>
+      </div>
+      <h2 class="article-title"></a>{{object.title }}</h2>
+      <p class="article-content">{{ object.data }}</p>
+      <div class="only-on-hover"> <!--Display this box only on hover-->
+      </div>
+      </div>
+    </article>
+    <!-- just have to make the like thing work herezq-->
+    <ul class="additional-things">
+      <li class="nav"id="navicon">Share</li>
+        <ul class="side-categories" >  
+          <li> {% post_to_facebook "{{request.build_absolute_uri}}" "Facebook" %}</li>
+          <li>{% post_to_twitter "New Song: {{object.title}}. Check it out!" object_or_url "Post to Twitter" %}</li>
+          <li>{% post_to_linkedin object_or_url %}</li>
+          <li>{% post_to_reddit "New Song: {{object.title}}" "{{request.build_absolute_uri}}" %}</li>
+          <li>{% post_to_telegram "New Song: {{object.title}}" "{{request.build_absolute_uri}}" %}</li>
+          <li>{% post_to_whatsapp object_or_url "Share via WhatsApp" %}</li>
+        </ul>
+      <li>Like</li>
+      <li>Comment</li>
+    </ul>
+    <br>
+    <br>
+    
+
+{% endblock content %}
