@@ -1,0 +1,90 @@
+nav {
+    background-color: #262626;
+}
+
+nav ul {
+    list-style: none;
+    padding: 1em;
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+    justify-content: space-around;
+}
+
+nav ul li {
+    padding: .25em;
+    font-size: 20px;
+}
+
+nav ul a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+#responsive-button {
+    width: 24px;
+    display: none;
+    padding:0;
+}
+
+#responsive-button img {
+    max-width: 100%;
+}
+
+main {
+    width: 100%;
+    /* margin: 2em auto 0; */
+}
+
+
+
+
+/******* MEDIA QUERY *******/
+
+
+@media screen and (max-width: 1100px) {
+    
+    nav
+    {
+        height: 60px;
+        margin-right: -10px;
+        transition: 0.5s;
+    }
+
+    nav ul {
+        display: none;
+    }
+    
+    .responsive-style {
+        /* transition: 0.5s; */
+        display: block;
+        position: absolute;
+        margin-top: 60px;
+        background-color: #262626;
+        padding: 0;
+    }
+    
+    .responsive-style li {
+        padding: 1em;
+        font-size: 16px;
+    }
+    
+    .responsive-style li:hover {
+        background-color: #ccc;
+    }
+    
+    #responsive-button {
+        display: block;
+        padding: 0.7em;
+    }
+    
+}
+
+
+
+
+
+
+
+

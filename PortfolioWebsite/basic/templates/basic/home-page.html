@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'basic/new-home.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+   <title>Home Page</title>
+</head>
+<body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <!-- <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Django Blog</a> -->
+          <a class="navbar-brand mr-4">Home-Page</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="{% url 'contact-page' %}">Contact</a>
+              <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="#">Internships</a>
+              <a class="nav-item nav-link" href="{% url 'project-page' %}">Projects</a>
+              <a class="nav-item nav-link" href="{% url 'blog-home' %}">Blog</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main role="main" class="container" style="margin-top:10%">
+      <div class="row">
+        <div class="col-md-8">
+          {% block content %}{% endblock %}
+        </div>
+        <div class="col-md-8">
+            
+            <h1 class="raghav-narula-name">RAGHAV NARULA</h1>
+            <ul class="more-about-me">
+                <li class="place">Delhi,India</li>
+                <li>|</li>
+                <li class="mononoke ">Mononoke</li>
+                <li class="only-in-small">| raghavnarula98@gmail.com</li>
+            </ul>
+            <br>
+            <br>
+                                                                     <!-- This is important -->
+            <p id="about-me">
+
+            </p>
+        </div>
+        <div class="col-md-4">
+          <div class="content-section">
+            <h3 class="moreinfo">Hit Me up!</h3>
+            
+              <ul class="list-group">  
+                <a href="https://t.me/r_narula"><li class="list-group-item list-group-item-light"id='list-thing'>Telegram</li></a>
+                <a href="https://www.instagram.com/raghav.narula_3001/"><li class="list-group-item list-group-item-light"id='list-thing'>Insta</li></a>
+                <li class="list-group-item list-group-item-light"id='list-thing'>Mail Me</li>
+                <a href="https://github.com/r-narula"><li class="list-group-item list-group-item-light"id='list-thing'>Github</li></a>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      $(function() {     
+          $('.nav').on('click',function(e) {
+              e.preventDefault();
+              $(".side-categories").slideToggle();
+          });
+      });
+      var container = document.getElementById("about-me");
+        var notes = [
+          {scenario: 1, intro: "Hey, I'm Raghav Narula. I am a Backend developer and a Machine Learning enthusiast.Sitting on a computer for a big chunk of my Day.This site is a collection of my blogs n all the stuff I learn on a new basis."},
+        ];
+        function terminal(cl, i) {
+            var div = document.createElement('p');
+            div.className = cl;
+            container.appendChild(div);
+            var txt = [notes[0].intro].join('\n').split('');
+            var i = 0;
+            (function display() {
+                if(i < txt.length) {
+                  div.innerHTML += txt[i].replace('\n', '<br />');
+                  ++i;
+                  setTimeout(display, 50);
+              }
+            })();
+        }
+        terminal('blueTh', 0);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
