@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'z#*-5r@og2^w3g8zu+cm$&e&n=keb*l^^b@5r@qg9$o0qw34)*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['rnarula.herokuapp.com']
 
